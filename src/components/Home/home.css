@@ -1,0 +1,39 @@
+.box {
+  position: relative;
+  transform: translateX(-225px);
+  margin-left: 0;
+}
+
+.box.active {
+  animation-name: animate;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.box.not_active {
+  animation-name: animate-back;
+  animation-duration: 2s;
+  /* animation-delay: 1s; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  from {
+    transform: translateX(-225px);
+  }
+
+  to {
+    transform: translateX(0);
+    margin-left: 10px;
+  }
+}
+
+@keyframes animate-back {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-225px);
+  }
+}
